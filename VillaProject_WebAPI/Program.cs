@@ -5,6 +5,7 @@ using VillaProject_WebAPI;
 using VillaProject_WebAPI.Data;
 using VillaProject_WebAPI.Repository;
 using VillaProject_WebAPI.Repository.IRepository;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 });
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 builder.Services.AddScoped<IVillaRepository, VillaRepository>();
+builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>(); 
 builder.Services.AddControllers(options => {
     //options.ReturnHttpNotAcceptable = true;
 }).AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
