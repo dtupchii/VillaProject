@@ -31,18 +31,15 @@ namespace VillaProject_WebAPI.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Amenity")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Details")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -70,7 +67,7 @@ namespace VillaProject_WebAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 11, 26, 14, 8, 14, 390, DateTimeKind.Local).AddTicks(8792),
+                            CreatedDate = new DateTime(2023, 12, 28, 15, 51, 4, 435, DateTimeKind.Local).AddTicks(6384),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa3.jpg",
                             Name = "Royal Villa",
@@ -83,7 +80,7 @@ namespace VillaProject_WebAPI.Migrations
                         {
                             Id = 2,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 11, 26, 14, 8, 14, 390, DateTimeKind.Local).AddTicks(8848),
+                            CreatedDate = new DateTime(2023, 12, 28, 15, 51, 4, 435, DateTimeKind.Local).AddTicks(6441),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa1.jpg",
                             Name = "Premium Pool Villa",
@@ -96,7 +93,7 @@ namespace VillaProject_WebAPI.Migrations
                         {
                             Id = 3,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 11, 26, 14, 8, 14, 390, DateTimeKind.Local).AddTicks(8851),
+                            CreatedDate = new DateTime(2023, 12, 28, 15, 51, 4, 435, DateTimeKind.Local).AddTicks(6444),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa4.jpg",
                             Name = "Luxury Pool Villa",
@@ -109,7 +106,7 @@ namespace VillaProject_WebAPI.Migrations
                         {
                             Id = 4,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 11, 26, 14, 8, 14, 390, DateTimeKind.Local).AddTicks(8853),
+                            CreatedDate = new DateTime(2023, 12, 28, 15, 51, 4, 435, DateTimeKind.Local).AddTicks(6446),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa5.jpg",
                             Name = "Diamond Villa",
@@ -122,7 +119,7 @@ namespace VillaProject_WebAPI.Migrations
                         {
                             Id = 5,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 11, 26, 14, 8, 14, 390, DateTimeKind.Local).AddTicks(8856),
+                            CreatedDate = new DateTime(2023, 12, 28, 15, 51, 4, 435, DateTimeKind.Local).AddTicks(6449),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa2.jpg",
                             Name = "Diamond Pool Villa",
@@ -142,7 +139,6 @@ namespace VillaProject_WebAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("SpecialDetails")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedDate")

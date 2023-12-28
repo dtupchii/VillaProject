@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using VillaProject_Web.Models;
 using VillaProject_Web.Models.DTO;
 using VillaProject_Web.Services.IServices;
@@ -28,6 +29,28 @@ namespace VillaProject_Web.Controllers
             }
 
             return View(list);
+        }
+
+
+        public async Task<IActionResult> CreateVilla()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateVilla(VillaCreateDTO model)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = await _villaService.CreateAsync<APIResponse>(model);
+                if (response != null && response.IsSuccess)
+                {
+                    return RedirectToAction(nameof(IndexVilla));
+                }
+            }
+
+            return View(model);
         }
     }
 }
