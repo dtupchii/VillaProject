@@ -6,21 +6,21 @@ using VillaProject_WebAPI.Repository.IRepository;
 
 namespace VillaProject_WebAPI.Repository
 {
-    public class VillaNumberRepository : Repository<VillaNumber>, IVillaNumberRepository
+    public class VillaRepository : Repository<Villa>, IVillaRepository
     {
         private readonly ApplicationDbContext _db;
 
-        public VillaNumberRepository(ApplicationDbContext db) : base(db)
+        public VillaRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
 
-        public async Task<VillaNumber> UpdateAsync(VillaNumber villaNumber)
+        public async Task<Villa> UpdateAsync(Villa villa)
         {
-            villaNumber.UpdatedDate = DateTime.Now;
-            _db.VillaNumbers.Update(villaNumber);
+            villa.UpdatedDate = DateTime.Now;
+            _db.Villas.Update(villa);
             await _db.SaveChangesAsync();
-            return villaNumber;
+            return villa;
         }
     }
 }
